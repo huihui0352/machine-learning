@@ -1,4 +1,5 @@
 import streamlit as st
+from sklearn.metrics import accuracy_score
 import pickle
 ##加载模型
 with open('svm_model.pickle','rb') as file:
