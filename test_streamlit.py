@@ -42,8 +42,9 @@ s23=st.selectbox(label="脉数：",options=['yes','no'])
 s24=st.selectbox(label="脉细：",options=['yes','no'])
 s8=st.selectbox(label="脉弦：",options=['yes','no'])
 
-st.write("### 用户输入的特征数据：{}".format([s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24]))
-submitted=st.form_submit_button("辨证")
+with st.form(key="penguin")
+    st.write("### 用户输入的特征数据：{}".format([s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24]))
+    submitted=st.form_submit_button("辨证")
 
 if submitted:
     s1_y,s1_n=0,0
