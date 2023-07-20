@@ -51,7 +51,7 @@ if submitted:
     if s1=='yes':
         s1=1
     elif s1=='no':
-        s1=1
+        s1=0
     
     s2=0
     if s2=='yes':
