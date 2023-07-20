@@ -42,7 +42,7 @@ s23=st.selectbox(label="脉数：",options=['yes','no'])
 s24=st.selectbox(label="脉细：",options=['yes','no'])
 s8=st.selectbox(label="脉弦：",options=['yes','no'])
 
-with st.form(key="penguin"):
+with st.form(key="症状"):
     st.write("### 用户输入的特征数据：{}".format([s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24]))
     submitted=st.form_submit_button("辨证")
 
@@ -51,145 +51,145 @@ if submitted:
     if s1=='yes':
         s1_y=1
     elif s1=='no':
-        s1_n=0
+        s1_n=1
     
     s2_y,s2_n=0,0
     if s2=='yes':
         s2_y=1
     elif s2=='no':
-        s2_n=0
+        s2_n=1
 
     s3_y,s3_n=0,0
     if s3=='yes':
         s3_y=1
     elif s3=='no':
-        s3_n=0
+        s3_n=1
     
     s4_y,s4_n=0,0
     if s4=='yes':
         s4_y=1
     elif s4=='no':
-        s5_n=0
+        s5_n=1
 
     s5_y,s5_n=0,0
     if s5=='yes':
         s5_y=1
     elif s5=='no':
-        s5_n=0
+        s5_n=1
    
     s6_y,s6_n=0,0
     if s6=='yes':
         s6_y=1
     elif s6=='no':
-        s6_n=0
+        s6_n=1
 
     s7_y,s7_n=0,0
     if s7=='yes':
         s7_y=1
     elif s7=='no':
-        s7_n=0
+        s7_n=1
 
     s8_y,s8_n=0,0
     if s8=='yes':
         s8_y=1
     elif s8=='no':
-        s8_n=0
+        s8_n=1
 
     s9_y,s9_n=0,0
     if s9=='yes':
         s9_y=1
     elif s9=='no':
-        s9_n=0
+        s9_n=1
 
     s10_y,s10_n=0,0
     if s10=='yes':
         s10_y=1
     elif s10=='no':
-        s10_n=0
+        s10_n=1
 
     s11_y,s11_n=0,0
     if s11=='yes':
         s11_y=1
     elif s11=='no':
-        s11_n=0
+        s11_n=1
     
     s12_y,s12_n=0,0
     if s12=='yes':
         s12_y=1
     elif s12=='no':
-        s12_n=0
+        s12_n=1
 
     s13_y,s13_n=0,0
     if s13=='yes':
         s13_y=1
     elif s13=='no':
-        s13_n=0
+        s13_n=1
 
     s14_y,s14_n=0,0
     if s14=='yes':
         s14_y=1
     elif s14=='no':
-        s14_n=0
+        s14_n=1
 
     s15_y,s15_n=0,0
     if s15=='yes':
         s15_y=1
     elif s15=='no':
-        s15_n=0
+        s15_n=1
 
     s16_y,s16_n=0,0
     if s16=='yes':
         s16_y=1
     elif s16=='no':
-        s16_n=0
+        s16_n=1
     
     s17_y,s17_n=0,0
     if s17=='yes':
         s17_y=1
     elif s17=='no':
-        s17_n=0
+        s17_n=1
 
     s18_y,s18_n=0,0
     if s18=='yes':
         s18_y=1
     elif s18=='no':
-        s18_n=0
+        s18_n=1
 
     s19_y,s19_n=0,0
     if s19=='yes':
         s19_y=1
     elif s19=='no':
-        s19_n=0
+        s19_n=1
 
     s20_y,s20_n=0,0
     if s20=='yes':
         s20_y=1
     elif s20=='no':
-        s20_n=0
+        s20_n=1
 
     s21_y,s21_n=0,0
     if s21=='yes':
         s21_y=1
     elif s21=='no':
-        s21_n=0
+        s21_n=1
 
     s22_y,s22_n=0,0
     if s22=='yes':
         s22_y=1
     elif s22=='no':
-        s22_n=0
+        s22_n=1
 
     s23_y,s23_n=0,0
     if s23=='yes':
         s23_y=1
     elif s23=='no':
-        s23_n=0
+        s23_n=1
 
     s24_y,s24_n=0,0
     if s24=='yes':
         s24_y=1
     elif s24=='no':
-        s24_n=0
+        s24_n=1
 
 
     
