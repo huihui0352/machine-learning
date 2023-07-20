@@ -1,12 +1,12 @@
 import streamlit as st
 import pickle
 ##加载模型
-with open('E:/VScode/辨证模型/svm_model.pickle','rb') as file:
+with open('svm_model.pickle','rb') as file:
     svm_model=pickle.load(file)
     st.write("### svm model:\n",svm_model)
 
 ##加标签名称
-with open ('E:\VScode\辨证模型\label_name.pickle','rb') as file:
+with open ('label_name.pickle','rb') as file:
     label_names=pickle.load(file)
     st.write("###label names:\n",label_names)
 
