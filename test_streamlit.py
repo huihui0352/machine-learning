@@ -1,6 +1,9 @@
 import streamlit as st
 from sklearn.metrics import accuracy_score
 import pickle
+
+st.title("***肾衰诊疗模型***")
+
 ##加载模型
 with open('svm_model.pickle','rb') as file:
     svm_model=pickle.load(file)
