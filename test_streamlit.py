@@ -43,7 +43,7 @@ s24=st.selectbox(label="脉细：",options=['有','无'])
 s8=st.selectbox(label="脉弦：",options=['有','无'])
 
 with st.form(key="症状"):
-    submitted=st.form_submit_button("辨证")
+    submitted=st.form_submit_button("辨证选方")
 
 if submitted:
     s1=0
