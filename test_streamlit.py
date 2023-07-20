@@ -201,4 +201,4 @@ if submitted:
 
     #辨证选方
     predict_species=label_names[new_prediction][0]
-    st.write("###方：",predict_species)
+    st.write("### 方：",predict_species)
