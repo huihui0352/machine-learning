@@ -9,7 +9,7 @@ with open('svm_model.pickle','rb') as file:
 ##加标签名称
 with open ('label_name.pickle','rb') as file:
     label_names=pickle.load(file)
-    st.write("###label names:\n",label_names)
+    st.write("### label names:\n",label_names)
 
 ##模型预测
 ##输入特征数据
