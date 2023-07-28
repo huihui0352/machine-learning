@@ -17,30 +17,38 @@ with open ('label_name.pickle','rb') as file:
 ##模型预测
 ##输入特征数据
 
-s1=st.selectbox(label="便秘：",options=['有','无'])
-s2=st.selectbox(label="不欲饮食：",options=['有','无'])
-s3=st.selectbox(label="盗汗：",options=['有','无'])
-s4=st.selectbox(label="恶心：",options=['有','无'])
-s5=st.selectbox(label="浮肿：",options=['有','无'])
-s6=st.selectbox(label="口干：",options=['有','无'])
-s7=st.selectbox(label="口苦：",options=['有','无'])
-s9=st.selectbox(label="尿少：",options=['有','无'])
-s10=st.selectbox(label="神疲乏力：",options=['有','无'])
-s11=st.selectbox(label="头晕：",options=['有','无'])
-s12=st.selectbox(label="畏寒：",options=['有','无'])
-s13=st.selectbox(label="五心烦热：",options=['有','无'])
-s14=st.selectbox(label="腰酸：",options=['有','无'])
-s15=st.selectbox(label="舌淡白：",options=['有','无'])
-s16=st.selectbox(label="夜寐不安：",options=['有','无'])
-s17=st.selectbox(label="舌红：",options=['有','无'])
-s18=st.selectbox(label="舌胖大：",options=['有','无'])
-s19=st.selectbox(label="舌紫：",options=['有','无'])
-s20=st.selectbox(label="苔白：",options=['有','无'])
-s21=st.selectbox(label="苔黄：",options=['有','无'])
-s22=st.selectbox(label="苔腻：",options=['有','无'])
-s23=st.selectbox(label="脉数：",options=['有','无'])
-s24=st.selectbox(label="脉细：",options=['有','无'])
-s8=st.selectbox(label="脉弦：",options=['有','无'])
+s1=st.selectbox(label="便秘：",options=['yes','no'])
+s2=st.selectbox(label="不欲饮食：",options=['yes','no'])
+s3=st.selectbox(label="大便溏薄：",options=['yes','no'])
+s4=st.selectbox(label="盗汗：",options=['yes','no'])
+s5=st.selectbox(label="恶心：",options=['yes','no'])
+s6=st.selectbox(label="浮肿：",options=['yes','no'])
+s7=st.selectbox(label="腹胀：",options=['yes','no'])
+s8=st.selectbox(label="口干：",options=['yes','no'])
+s9=st.selectbox(label="口苦：",options=['yes','no'])
+s10=st.selectbox(label="面色白：",options=['yes','no'])
+s11=st.selectbox(label="面色萎黄：",options=['yes','no'])
+s12=st.selectbox(label="尿少：",options=['yes','no'])
+s13=st.selectbox(label="尿中带泡沫：",options=['yes','no'])
+s14=st.selectbox(label="气短：",options=['yes','no'])
+s15=st.selectbox(label="神疲乏力：",options=['yes','no'])
+s16=st.selectbox(label="头晕：",options=['yes','no'])
+s17=st.selectbox(label="畏寒：",options=['yes','no'])
+s18=st.selectbox(label="五心烦热：",options=['yes','no'])
+s19=st.selectbox(label="腰酸：",options=['yes','no'])
+s20=st.selectbox(label="腰痛：",options=['yes','no'])
+s21=st.selectbox(label="夜寐不安：",options=['yes','no'])
+s22=st.selectbox(label="舌淡白：",options=['yes','no'])
+s23=st.selectbox(label="舌光：",options=['yes','no'])
+s24=st.selectbox(label="舌红：",options=['yes','no'])
+s25=st.selectbox(label="舌胖大：",options=['yes','no'])
+s26=st.selectbox(label="舌紫：",options=['yes','no'])
+s27=st.selectbox(label="苔白：",options=['yes','no'])
+s28=st.selectbox(label="苔黄：",options=['yes','no'])
+s29=st.selectbox(label="苔腻：",options=['yes','no'])
+s30=st.selectbox(label="脉滑：",options=['yes','no'])
+s31=st.selectbox(label="脉数：",options=['yes','no'])
+s32=st.selectbox(label="脉细：",options=['yes','no'])
 
 with st.form(key="症状"):
     submitted=st.form_submit_button("辨证选方")
@@ -189,10 +197,59 @@ if submitted:
         s24=1
     elif s24=='无':
         s24=0
+    
+    s25=0
+    if s25=='有':
+        s25=1
+    elif s25=='无':
+        s25=0
+    
+    s26=0
+    if s26=='有':
+        s26=1
+    elif s26=='无':
+        s26=0
+
+    s27=0
+    if s27=='有':
+        s27=1
+    elif s27=='无':
+        s27=0
+
+    s28=0
+    if s28=='有':
+        s28=1
+    elif s28=='无':
+        s28=0
+
+    s29=0
+    if s29=='有':
+        s29=1
+    elif s29=='无':
+        s29=0
+
+    s30=0
+    if s30=='有':
+        s30=1
+    elif s30=='无':
+        s30=0
+
+    s31=0
+    if s31=='有':
+        s31=1
+    elif s31=='无':
+        s31=0
+
+    s32=0
+    if s32=='有':
+        s32=1
+    elif s32=='无':
+        s32=0
+
 
     
      ##合并所有特征
-    temp_feature=[s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24]
+    temp_feature=[s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,s26,s27,s28,s29,s30,s31,s32]
  
      ##模型预测
     new_prediction = svm_model.predict([temp_feature])
@@ -200,3 +257,4 @@ if submitted:
     #辨证选方
     predict_species=label_names[new_prediction][0]
     st.write("### 方：",predict_species)
+
